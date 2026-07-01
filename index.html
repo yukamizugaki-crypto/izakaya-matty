@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>居酒屋 matty | 群馬県高崎市の隠れ家居酒屋</title>
+  <meta name="description" content="群馬県高崎市にある居酒屋 matty。お一人様歓迎のアットホームな雰囲気。和洋問わずのこだわりメニューとワンドリンク制。18:00〜翌3:00営業。" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#top" class="logo" aria-label="居酒屋 matty トップへ">
+        <span class="logo-jp">居酒屋</span>
+        <span class="logo-en">matty</span>
+      </a>
+
+      <!-- PC ナビ -->
+      <nav class="global-nav" id="global-nav" aria-label="グローバルナビゲーション">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">ABOUT</a></li>
+          <li><a href="#menu" class="nav-link">MENU</a></li>
+          <li><a href="#access" class="nav-link">ACCESS</a></li>
+          <li><a href="#info" class="nav-link">INFO</a></li>
+          <li><a href="#contact" class="nav-link nav-link--reserve">ご予約</a></li>
+        </ul>
+      </nav>
+
+      <!-- ハンバーガーボタン（モバイル） -->
+      <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="drawer-nav" aria-label="メニューを開く">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルオーバーレイ -->
+  <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+  <!-- ドロワーメニュー（モバイル専用） -->
+  <div class="drawer" id="drawer-nav" role="dialog" aria-modal="true" aria-label="モバイルメニュー" aria-hidden="true">
+    <!-- ドロワーヘッダー -->
+    <div class="drawer-header">
+      <a href="#top" class="drawer-logo" id="drawer-logo-link">
+        <span class="logo-jp">居酒屋</span>
+        <span class="logo-en">matty</span>
+      </a>
+      <button class="drawer-close" id="drawer-close-btn" aria-label="メニューを閉じる">
+        <span class="drawer-close-line"></span>
+        <span class="drawer-close-line"></span>
+      </button>
+    </div>
+
+    <!-- ドロワーナビ -->
+    <nav class="drawer-nav" aria-label="モバイルナビゲーション">
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item"><a href="#about"   class="drawer-nav-link" data-index="0">ABOUT<span class="drawer-nav-jp">について</span></a></li>
+        <li class="drawer-nav-item"><a href="#menu"    class="drawer-nav-link" data-index="1">MENU<span class="drawer-nav-jp">メニュー</span></a></li>
+        <li class="drawer-nav-item"><a href="#access"  class="drawer-nav-link" data-index="2">ACCESS<span class="drawer-nav-jp">アクセス</span></a></li>
+        <li class="drawer-nav-item"><a href="#info"    class="drawer-nav-link" data-index="3">INFO<span class="drawer-nav-jp">営業情報</span></a></li>
+        <li class="drawer-nav-item"><a href="#contact" class="drawer-nav-link drawer-nav-link--reserve" data-index="4">ご予約</a></li>
+      </ul>
+    </nav>
+
+    <!-- ドロワーフッター -->
+    <div class="drawer-footer">
+      <div class="drawer-divider"></div>
+      <p class="drawer-hours">18:00 〜 翌 3:00 &nbsp;|&nbsp; 月曜定休</p>
+      <div class="drawer-sns">
+        <a href="https://www.instagram.com/jujiuwumatty/" target="_blank" rel="noopener noreferrer" class="drawer-sns-link" id="drawer-instagram-link" aria-label="Instagramを開く">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+          </svg>
+          Instagram
+        </a>
+        <a href="https://www.facebook.com/share/1EvjV6GsiW/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="drawer-sns-link" id="drawer-facebook-link" aria-label="Facebookを開く">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Facebook
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ヒーローセクション -->
+  <section class="hero" id="top">
+    <div class="hero-bg" id="hero-slideshow">
+      <div class="hero-slide active"><img src="img/メニュー1.webp" alt="料理イメージ1" class="hero-img" /></div>
+      <div class="hero-slide"><img src="img/メニュー2.webp" alt="料理イメージ2" class="hero-img" /></div>
+      <div class="hero-slide"><img src="img/メニュー3.webp" alt="料理イメージ3" class="hero-img" /></div>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-catch">高崎の夜に、ほっとできる場所。</p>
+      <h1 class="hero-title">
+        <span class="hero-title-jp">居酒屋</span>
+        <span class="hero-title-en">matty</span>
+      </h1>
+      <p class="hero-sub">毎日 18:00 OPEN &nbsp;|&nbsp; 深夜 3:00 まで営業</p>
+      <a href="#contact" class="btn btn--primary" id="hero-reserve-btn">ご予約はこちら</a>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="下へスクロール">
+      <span class="scroll-down-line"></span>
+    </a>
+  </section>
+
+  <!-- ABOUTセクション -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">ABOUT</p>
+        <h2 class="section-title">居酒屋 matty について</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">お一人様も、グループも。<br />ここは、高崎の夜のコミュニティ広場。</p>
+          <p class="about-body">
+            居酒屋 mattyは、群馬県高崎市にひっそりと佇む、アットホームな隠れ家居酒屋です。
+            初めてのお客様でも、すぐに常連さんのような心地よさを感じていただけます。
+          </p>
+          <p class="about-body">
+            カウンター席とお座敷をご用意しており、お一人様のお客様が多く、気づけばお客さん同士で会話が生まれ、
+            笑顔があふれる場所になっています。ひとりで来ても、友人と来ても、いつのまにか輪が広がるのが matty の魅力です。
+          </p>
+          <p class="about-body">
+            メニューは和洋問わず幅広く取り揃えており、お酒のおともにも、
+            締めのご飯目当てにも、いろいろなシーンでご利用いただけます。
+            ワンドリンク制となっておりますので、ごゆっくりおくつろぎください。
+          </p>
+          <div class="about-tags">
+            <span class="tag">お一人様歓迎</span>
+            <span class="tag">アットホーム</span>
+            <span class="tag">和洋メニュー</span>
+            <span class="tag">ワンドリンク制</span>
+            <span class="tag">深夜まで営業</span>
+          </div>
+        </div>
+        <div class="about-features">
+          <div class="feature-card">
+            <div class="feature-icon-wrap">
+              <svg class="feature-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="24" cy="18" r="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">お一人様大歓迎</h3>
+            <p class="feature-desc">カウンター席で気軽にお立ち寄りください。常連さんも多く、自然と会話が生まれる温かい雰囲気です。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrap">
+              <svg class="feature-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="8" y="16" width="32" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 16V12a8 8 0 1116 0v4" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">和洋こだわりメニュー</h3>
+            <p class="feature-desc">和食・洋食を問わず、こだわりの料理をご提供。ご飯目当てのお客様もぜひどうぞ。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrap">
+              <svg class="feature-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 8h24v8a12 12 0 01-24 0V8z" stroke="currentColor" stroke-width="2"/>
+                <path d="M24 28v12M16 40h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">ワンドリンク制</h3>
+            <p class="feature-desc">お席に着いたらまずは一杯。ゆっくりとお時間をかけてお楽しみいただけます。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrap">
+              <svg class="feature-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+                <path d="M24 14v10l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">深夜3:00まで営業</h3>
+            <p class="feature-desc">18:00〜翌3:00まで営業中。仕事帰りや二次会、深夜の一杯にもぜひご来店ください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENUセクション -->
+  <section class="section menu" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">MENU</p>
+        <h2 class="section-title">おすすめメニュー</h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">和洋を問わず、素材にこだわったメニューをご用意しています。</p>
+      </div>
+
+      <!-- メニュー1〜3（正方形系） -->
+      <div class="menu-grid menu-grid--square">
+        <div class="menu-card" id="menu-card-1">
+          <div class="menu-img-wrap">
+            <img src="img/メニュー1.webp" alt="料理写真1" class="menu-img" loading="lazy" />
+          </div>
+        </div>
+        <div class="menu-card" id="menu-card-2">
+          <div class="menu-img-wrap">
+            <img src="img/メニュー2.webp" alt="料理写真2" class="menu-img" loading="lazy" />
+          </div>
+        </div>
+        <div class="menu-card" id="menu-card-3">
+          <div class="menu-img-wrap">
+            <img src="img/メニュー3.webp" alt="料理写真3" class="menu-img" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <!-- メニュー4〜6（縦長系） -->
+      <div class="menu-grid menu-grid--portrait">
+        <div class="menu-card" id="menu-card-4">
+          <div class="menu-img-wrap menu-img-wrap--portrait">
+            <img src="img/メニュー4.png" alt="料理写真4" class="menu-img" loading="lazy" />
+          </div>
+        </div>
+        <div class="menu-card" id="menu-card-5">
+          <div class="menu-img-wrap menu-img-wrap--portrait">
+            <img src="img/メニュー5.png" alt="料理写真5" class="menu-img" loading="lazy" />
+          </div>
+        </div>
+        <div class="menu-card" id="menu-card-6">
+          <div class="menu-img-wrap menu-img-wrap--portrait">
+            <img src="img/メニュー6.png" alt="料理写真6" class="menu-img" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <!-- メニュー7（横長・ワイド） -->
+      <div class="menu-wide" id="menu-card-7">
+        <div class="menu-wide-img-wrap">
+          <img src="img/メニュー7.png" alt="料理写真7" class="menu-wide-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="menu-note-block">
+        <p>メニューは仕入れ状況や季節によって日替わりでご用意しております。最新の情報はお電話またはSNSにてご確認ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESSセクション -->
+  <section class="section access" id="access">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">ACCESS</p>
+        <h2 class="section-title">アクセス</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="access-grid">
+        <div class="access-info">
+          <dl class="info-list">
+            <div class="info-item">
+              <dt class="info-label">住所</dt>
+              <dd class="info-value">〒370-0064<br />群馬県高崎市芝塚町1917</dd>
+            </div>
+            <div class="info-item">
+              <dt class="info-label">交通手段</dt>
+              <dd class="info-value">JR 高崎駅 徒歩約20分<br />お車の場合：駐車場2台あり<br />（満車の場合は近隣駐車場をご利用ください）</dd>
+            </div>
+            <div class="info-item">
+              <dt class="info-label">電話番号</dt>
+              <dd class="info-value"><a href="tel:09071981557" class="info-link" id="access-tel-link">090-7198-1557</a></dd>
+            </div>
+          </dl>
+          <a href="https://www.google.com/maps/place/%E5%B1%85%E9%85%92%E5%B1%8B+matty/data=!4m2!3m1!1s0x0:0x3036a7948c3625df?sa=X&ved=1t:2428&ictx=111" target="_blank" rel="noopener noreferrer" class="btn btn--outline" id="google-map-btn">Google マップで開く</a>
+        </div>
+        <div class="access-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3228.357388048965!2d138.9992!3d36.3220!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3036a7948c3625df!2z5bGx6YWs5bGL5bGL77-lIG1hdHR5!5e0!3m2!1sja!2sjp!4v1720000000000"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="居酒屋 matty の地図"
+            aria-label="居酒屋 matty の地図（Google マップ）"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFOセクション（営業情報） -->
+  <section class="section info" id="info">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">INFO</p>
+        <h2 class="section-title">営業案内</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="info-grid">
+        <div class="info-card" id="info-hours">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+              <path d="M24 14v10l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="info-card-title">営業時間</h3>
+          <p class="info-card-value">18:00 〜 翌 3:00</p>
+          <p class="info-card-note">ラストオーダー 翌 2:30</p>
+        </div>
+        <div class="info-card" id="info-holiday">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="8" y="12" width="32" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 8v8M32 8v8M8 22h32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M17 32l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="info-card-title">定休日</h3>
+          <p class="info-card-value">月曜日</p>
+          <p class="info-card-note">祝日の場合は営業することがあります</p>
+        </div>
+        <div class="info-card" id="info-reserve">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 24h16M16 32h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M16 16h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="info-card-title">ご予約</h3>
+          <p class="info-card-value">お電話にてご予約ください</p>
+          <p class="info-card-note"><a href="tel:09071981557" class="info-link" id="info-tel-link">090-7198-1557</a></p>
+        </div>
+        <div class="info-card" id="info-parking">
+          <div class="info-card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="6" y="16" width="36" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M14 36v6M34 36v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M6 24h36" stroke="currentColor" stroke-width="2"/>
+              <circle cx="14" cy="30" r="2" fill="currentColor"/>
+              <circle cx="34" cy="30" r="2" fill="currentColor"/>
+              <path d="M10 16l4-8h20l4 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="info-card-title">駐車場</h3>
+          <p class="info-card-value">2台分あり</p>
+          <p class="info-card-note">満車の場合は近隣駐車場をご利用ください</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTセクション -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">CONTACT</p>
+        <h2 class="section-title">お問い合わせ・ご予約</h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">ご予約はお電話にてお気軽にどうぞ。お席に限りがございますので、事前のご予約をおすすめします。</p>
+      </div>
+      <div class="contact-block">
+        <a href="tel:09071981557" class="contact-tel" id="contact-tel-link">
+          <span class="contact-tel-label">予約・お問い合わせ</span>
+          <span class="contact-tel-number">090-7198-1557</span>
+        </a>
+        <p class="contact-hours">受付時間：営業時間内（18:00〜翌3:00）&nbsp;/&nbsp;月曜定休</p>
+        <div class="contact-sns">
+          <p class="contact-sns-label">SNS でも情報を発信中</p>
+          <div class="sns-links">
+            <a href="https://www.instagram.com/jujiuwumatty/" target="_blank" rel="noopener noreferrer" class="sns-link" id="instagram-link" aria-label="Instagramを開く">
+              <svg class="sns-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+              </svg>
+              Instagram
+            </a>
+            <a href="https://www.facebook.com/share/1EvjV6GsiW/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="sns-link" id="facebook-link" aria-label="Facebookを開く">
+              <svg class="sns-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-jp">居酒屋</span>
+          <span class="logo-en">matty</span>
+        </div>
+        <div class="footer-info">
+          <p>〒370-0064 群馬県高崎市芝塚町1917</p>
+          <p>TEL: <a href="tel:09071981557" id="footer-tel-link">090-7198-1557</a></p>
+          <p>営業時間: 18:00 〜 翌 3:00&nbsp;&nbsp;|&nbsp;&nbsp;定休日: 月曜日</p>
+        </div>
+        <nav class="footer-nav" aria-label="フッターナビゲーション">
+          <ul class="footer-nav-list">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#access">ACCESS</a></li>
+            <li><a href="#info">INFO</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="footer-copy">&copy; 2026 居酒屋 matty. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
